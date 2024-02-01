@@ -333,11 +333,11 @@ nav .fas{
         background-image: url(./img/ai.jpg);
     }
     .h-text{
-        margin-top: 20px;
+        margin-top: 40px;
         font-size: 16px;
     }
     .h-text h1{
-        font-size: 50px;
+        font-size: 40px;
         overflow-wrap: break-word;
     }
     nav .fas{
