@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> About Ammu</title>
+    <title>Shilpashrree.com</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/393af2f628.js" crossorigin="anonymous"></script>
@@ -23,7 +23,7 @@
                     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
 
-            <div class="h-text" id="dynamic-text">
+            <div class="h-text">
                 <!-- <p>portfolio</p> -->
                 <h1 id="typewriter"></h1>
             </div>
@@ -154,7 +154,7 @@
                     <div class="layer">
                         <h3>Shopping App</h3>
                         <p>
-                            I've developed dynamic websites, each tailored to unique brands and products.
+                            I've developed a range of dynamic shopping websites, each tailored to unique brands and products.
                             Let's collaborate to create a standout digital storefront for your brand! 🌐🛒
                         </p>
                         <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -181,43 +181,7 @@
                     </div>
                     <a href="./img/my-Resume (1).pdf" download class="btn btn2">Download CV</a>
                 </div>
-                <div class="contact-right"><!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                        <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <title> About Ammu</title>
-                        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-                        <link rel="stylesheet" href="./style.css">
-                        <script src="https://kit.fontawesome.com/393af2f628.js" crossorigin="anonymous"></script>
-                    </head>
-                        <div id="header">
-                            <div class="container">
-                                <nav>
-                                    <img src="./img/logo.png" alt="" class="logo">
-                                    <ul id="sidemenu">
-                                        <li><a href="#header">home</a></li>
-                                        <li><a href="#about">about</a></li>
-                                        <li><a href="#services">services</a></li>
-                                        <li><a href="#portfolio">portfolio</a></li>
-                                        <li><a href="#contact">contact</a></li> 
-                                        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
-                                    </ul>
-                                        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                                </nav>
-                    
-                                <div class="h-text">
-                                    <!-- <p>portfolio</p> -->
-                                    <h1>Hi, i'm <span>shilpa</span> shree <br>From Karnataka</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- about -->
-                        <div id="about">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="about-col-1">
-                    
+                <div class="contact-right">
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="Email" name="email" placeholder="Your Mail-Address">
@@ -279,32 +243,7 @@
           document.body.style.overflow = 'hidden';
         });
       </script> -->
-
-      <!-- <script>
-        var headerText = document.getElementById("dynamic-text");
-
-        headerText.style.opacity = 0;
-
-        var duration = 5000; // Animation duration in milliseconds
-        var startTime = null;
-
-        function fadeInText(timestamp) {
-            if (!startTime) startTime = timestamp;
-            var progress = timestamp - startTime;
-
-            var opacity = progress / duration;
-
-            headerText.style.opacity = opacity;
-
-            if (progress < duration) {
-                requestAnimationFrame(fadeInText);
-            }
-        }
-
-        // Start the fade-in animation
-        requestAnimationFrame(fadeInText);
-    </script> -->
-    <script>
+      <script>
         function typeWriter(text, i, interval) {
             if (i < text.length) {
                 if (text.charAt(i) === ",") {
@@ -338,11 +277,10 @@
             }
             return result;
         }
-        var textToType = " Hey,          I'm Shilpa Shree";
+        var textToType = " Hey, I'm Shilpa Shree";
     
         typeWriter(textToType, 0, 100);
-    </script>
-    
-     
+    </script>    
+      
 </body>
 </html> 
