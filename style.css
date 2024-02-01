@@ -61,6 +61,7 @@ nav ul li a:hover::after{
 .h-text h1{
     font-size: 60px;
     margin-top: 20px;
+    overflow-wrap: break-word;
 }
 .h-text h1 span{
     color:#ff004f;
@@ -114,6 +115,7 @@ nav ul li a:hover::after{
 }
 .tab-links.active-link::after{
     width: 50%;
+    color: #ff004f;
 }
 .tab-contents ul li{
     list-style: none;
@@ -316,11 +318,9 @@ nav .fas{
     font-family: cursive;
     font-size: 16px;
 }
-
 .fa-bars, .fa-circle-xmark {
     display: none;
 }
-
 /* css for small screen */
 @media only screen and (max-width:600px){
     .logo {
@@ -330,11 +330,11 @@ nav .fas{
         background-image: url(./img/ai.jpg);
     }
     .h-text{
-        margin-top: 140%;
+        margin-top: 20px;
         font-size: 16px;
     }
     .h-text h1{
-        font-size: 40px;
+        font-size: 70px;
         overflow-wrap: break-word;
     }
     nav .fas{
@@ -381,9 +381,7 @@ nav .fas{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
-    i{
-        color:white:
-    }
+   
 }
 #msz{
     color: #61b752;
