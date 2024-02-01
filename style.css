@@ -326,9 +326,9 @@ nav .fas{
     .logo {
         display: none;
     }
-    .fa-bars, .fa-circle-xmark {
+/*     .fa-bars, .fa-circle-xmark {
         display: inline-block;
-    }
+    } */
     #header{
         background-image: url(./img/ai.jpg);
     }
