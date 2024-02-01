@@ -318,9 +318,6 @@ nav .fas{
     font-family: cursive;
     font-size: 16px;
 }
-.fa-bars, .fa-circle-xmark {
-    display: none;
-}
 /* css for small screen */
 @media only screen and (max-width:600px){
     .logo {
