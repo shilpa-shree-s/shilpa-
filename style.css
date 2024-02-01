@@ -326,10 +326,10 @@ nav .fas{
     .logo {
         display: none;
     }
-/*     .fa-bars, .fa-circle-xmark {
+    /* fa-bars, .fa-circle-xmark {
         display: inline-block;
     } */
-    .fa-bars, .fa-circle-xmark {
+     .fa-bars, .fa-circle-xmark {
         display: none;
     } 
     #header{
