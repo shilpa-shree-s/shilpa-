@@ -316,9 +316,15 @@ nav .fas{
     font-family: cursive;
     font-size: 16px;
 }
+.fa-bars, .fa-circle-xmark {
+    display: none;
+}
 
 /* css for small screen */
 @media only screen and (max-width:600px){
+    .fa-bars, .fa-circle-xmark {
+        display: inline-block;
+    }
     #header{
         background-image: url(./img/ai.jpg);
     }
@@ -328,6 +334,7 @@ nav .fas{
     }
     .h-text h1{
         font-size: 70px;
+        overflow-wrap: break-word;
     }
     nav .fas{
         display: block;
