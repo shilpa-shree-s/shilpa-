@@ -23,9 +23,9 @@
                     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
 
-            <div class="h-text">
+            <div class="h-text" id="dynamic-text">
                 <!-- <p>portfolio</p> -->
-                <h1>Hi, i'm <span>shilpa</span> shree <br>From Karnataka</h1>
+                <h1 id="typewriter"></h1>
             </div>
         </div>
     </div>
@@ -243,6 +243,56 @@
           document.body.style.overflow = 'hidden';
         });
       </script> -->
+
+      <!-- <script>
+        var headerText = document.getElementById("dynamic-text");
+
+        headerText.style.opacity = 0;
+
+        var duration = 5000; // Animation duration in milliseconds
+        var startTime = null;
+
+        function fadeInText(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var progress = timestamp - startTime;
+
+            var opacity = progress / duration;
+
+            headerText.style.opacity = opacity;
+
+            if (progress < duration) {
+                requestAnimationFrame(fadeInText);
+            }
+        }
+
+        // Start the fade-in animation
+        requestAnimationFrame(fadeInText);
+    </script> -->
+
+<script>
+    function typeWriter(text, i, interval) {
+        if (i < text.length) {
+            if (text.substring(i, i + 6) === "Shilpa") {
+                document.getElementById("typewriter").innerHTML += "<span class='highlight'>" + text.substring(i, i + 6) + "</span>";
+                i += 5; 
+            } else {
+                document.getElementById("typewriter").innerHTML += text.charAt(i);
+            }
+            i++;
+            setTimeout(function() {
+                typeWriter(text, i, interval);
+            }, interval);
+        } else {
+            setTimeout(function() {
+                document.getElementById("typewriter").innerHTML = "";
+                typeWriter(text, 0, interval); 
+            }, 1000); 
+        }
+    }
+    var textToType = " Hi, I'm Shilpa Shree";
+    typeWriter(textToType, 0, 200);
+</script>
+
       
 </body>
 </html> 
