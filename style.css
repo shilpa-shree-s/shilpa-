@@ -318,8 +318,9 @@ nav .fas{
     font-family: cursive;
     font-size: 16px;
 }
-.fa-bars, .fa-circle-xmark {
-    display: none;
+.fa-circle-xmark,
+.fa-bars {
+    display: none !important;
 }
 /* css for small screen */
 @media only screen and (max-width:600px){
@@ -330,7 +331,7 @@ nav .fas{
         background-image: url(./img/ai.jpg);
     }
     .h-text{
-        margin-top: 20px;
+        margin-top: 95%;
         font-size: 16px;
     }
     .h-text h1{
