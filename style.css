@@ -316,6 +316,7 @@ nav .fas{
     font-family: cursive;
     font-size: 16px;
 }
+
 .fa-bars, .fa-circle-xmark {
     display: none;
 }
@@ -332,11 +333,11 @@ nav .fas{
         background-image: url(./img/ai.jpg);
     }
     .h-text{
-        margin-top: 50%;
+        margin-top: 20px;
         font-size: 16px;
     }
     .h-text h1{
-        font-size: 65px;
+        font-size: 70px;
         overflow-wrap: break-word;
     }
     nav .fas{
