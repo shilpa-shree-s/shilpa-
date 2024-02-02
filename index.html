@@ -185,11 +185,12 @@
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="Email" name="email" placeholder="Your Mail-Address">
+                        <input type="Email" name="Email" placeholder="Your Mail-Address">
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <!-- <button type="submit" class="btn btn2">Submit</button> -->
                         <input type="submit" class="btn btn2">
                     </form>
+                    <div id="msg"></div>
                 </div>
             </div>
         </div>
@@ -221,18 +222,7 @@
         function closemenu(){
             sidemen.style.right="-200px"
         }
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/a/macros/stellapps.com/s/AKfycbzOySHyJp9SZXAFXSaiZDvsDT_nOI-tQDCGZphLeuzyBGGqpSx5jy1QZThGYKgUWAM/exec'
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+    </script>      
        <!-- <script>
         const title = document.querySelector('h1');
     
@@ -282,6 +272,28 @@
     
         typeWriter(textToType, 0, 100);
     </script>    
+     <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwryVLvz5mqMnMjc9-LB8Bt-UBY658oj23g_vjeANoA7fIVAOBRr-dH3zYZozqFsbU/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg'); // Reference to the message div
+          
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully";
+                    setTimeout(function(){
+                        msg.innerHTML = "";
+                    }, 5000);
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    msg.innerHTML = "An error occurred. Please try again later.";
+                });
+        });
+    </script>
+    
       
 </body>
 </html> 
