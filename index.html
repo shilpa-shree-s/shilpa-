@@ -272,27 +272,36 @@
     
         typeWriter(textToType, 0, 100);
     </script>    
-     <script>
+    <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwryVLvz5mqMnMjc9-LB8Bt-UBY658oj23g_vjeANoA7fIVAOBRr-dH3zYZozqFsbU/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById('msg'); // Reference to the message div
           
-        form.addEventListener('submit', e => {
+        form.addEventListener('submit', async e => {
             e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
+            // Provide immediate feedback to the user
+            msg.innerHTML = "Submitting...";
+            
+            try {
+                const response = await fetch(scriptURL, { method: 'POST', body: new FormData(form)});
+                if (response.ok) {
                     msg.innerHTML = "Message sent successfully";
-                    setTimeout(function(){
-                        msg.innerHTML = "";
-                    }, 5000);
                     form.reset();
-                })
-                .catch(error => {
-                    console.error('Error!', error.message);
-                    msg.innerHTML = "An error occurred. Please try again later.";
-                });
+                } else {
+                    throw new Error('Network response was not ok.');
+                }
+            } catch (error) {
+                console.error('Error!', error.message);
+                msg.innerHTML = "An error occurred. Please try again later.";
+            } finally {
+                // Clear the message after a delay (e.g., 3 seconds)
+                setTimeout(() => {
+                    msg.innerHTML = "";
+                }, 3000);
+            }
         });
     </script>
+    
     
       
 </body>
